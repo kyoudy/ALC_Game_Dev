@@ -26,14 +26,24 @@ public class CharMove : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update(){
+    void Update()
+    {
         //this makes the character jump
         if (Input.GetKeyDown(KeyCode.Space) && grounded){
             Jump();
         }
-    }
 
-    public void Jump(){
+        // this code makes the character move from side to side using the A&D kays
+        if (Input.GetKey (KeyCode.D)){
+            GetComponent<Rigidbody2D>().velocity = new Vector2(MoveSpeed, GetComponent<Rigidbody2D>().velocity.y);
+
+        }
+        if (Input.GetKey (KeyCode.A)){
+            GetComponent<Rigidbody2D>().velocity = new Vector2(-MoveSpeed, GetComponent<Rigidbody2D>().velocity.y);
+
+        }
+    }
+        public void Jump(){
         GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, JumpHeight);
     }
 }
