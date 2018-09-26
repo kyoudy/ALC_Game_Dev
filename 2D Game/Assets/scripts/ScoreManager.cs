@@ -1,13 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour{
     public static int Score;
 
+
     Text Scoretext;
 
-    // Usee this for initialization
+    // Use this for initialization
     void Start(){
         Scoretext = GetComponent<Text>();
 
@@ -27,7 +29,7 @@ public class ScoreManager : MonoBehaviour{
     }
 
     public static void Reset(){
-        Score = 0
+        Score = 0;
     }
 
 }
