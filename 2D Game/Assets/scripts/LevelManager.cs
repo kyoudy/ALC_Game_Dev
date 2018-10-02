@@ -20,25 +20,26 @@ public class LevelManager : MonoBehaviour {
 
     // Store Gravity Value
     private float GravityStore;
-   
+
 
     // Use this for initialization
-	void Start () {
+    void Start(){
         PC = FindObjectOfType<Rigidbody2D>();
-	}
-	
+    }
+
     public void RespawnPlayer(){
         StartCoroutine("RespawnPCCo");
     }
 
-    public IEnumerator RespawnPCCo(){
+    public IEnumerator RespawnPlayerCo()
+    {
         //Generate Death Particle
-        Instantiate(DeathParticle, PC.transform.position, PC.transform.rotation);
+        Instantiate(DeathParticles, PC.transform.position, PC.transform.rotation);
         //hide Player
-        PC.enabled = false;
+        //PC.enable = false;
         PC.GetComponent<Renderer>().enabled = false;
         //Gravity Reset
-        gravityStore = PC.GetComponent<Rigidbody2D>().gravityScale;
+        GravityStore = PC.GetComponent<Rigidbody2D>().gravityScale;
         PC.GetComponent<Rigidbody2D>().gravityScale = 0f;
         PC.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         //Point Penalty
@@ -46,10 +47,15 @@ public class LevelManager : MonoBehaviour {
         //Debug Message
         Debug.Log("Player Respawn");
         //Respawn Delay
-        yield return new WaitForSeconds(respawnDelay);
+        yield return new WaitForSeconds(RespawnDelay);
         //Gravity Restore
         PC.GetComponent<Rigidbody2D>().gravityScale = GravityStore;
         //Math Player transform position
         RespawnPlayer.transform.position = currentCheckPoint.transform.position;
-
+        //Show PC
+        //PC.enable = true;
+        PC.GetComponent<Renderer>().enabled = true;
+        //Spawn PC
+        Instantiate(RespawnParticles, currentCheckPoint.transform.position, currentCheckPoint.transform.rotation);
     }
+}

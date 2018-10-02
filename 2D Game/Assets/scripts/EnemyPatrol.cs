@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyPatrol : MonoBehaviour{
+public class EnemyPatrol : MonoBehaviour {
 
     // Movement Variables
     public float MoveSpeed;
@@ -30,15 +30,14 @@ public class EnemyPatrol : MonoBehaviour{
         }
 
         if (MoveRight){
-            transform.localScale = new Vector3(-0.2f, 0.2f, 1f);
+            transform.localScale = new Vector3(1f, 1f, 1f);
             GetComponent<Rigidbody2D>().velocity = new Vector2(MoveSpeed, GetComponent<Rigidbody2D>().velocity.y);
         }
         else{
-            transform.localScale = new Vector3(0.2f, 0.2f, 1f);
+            transform.localScale = new Vector3(1f, 1f, 1f);
             GetComponent<Rigidbody2D>().velocity = new Vector2(-MoveSpeed, GetComponent<Rigidbody2D>().velocity.y);
         }
     }
 }
-
 
 
