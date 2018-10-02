@@ -487,6 +487,48 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &488500047
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4407938621385986, guid: de31d5bcfa15d49d4b5ea839b5fcf786, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.06610207
+      objectReference: {fileID: 0}
+    - target: {fileID: 4407938621385986, guid: de31d5bcfa15d49d4b5ea839b5fcf786, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.47464433
+      objectReference: {fileID: 0}
+    - target: {fileID: 4407938621385986, guid: de31d5bcfa15d49d4b5ea839b5fcf786, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0.14481571
+      objectReference: {fileID: 0}
+    - target: {fileID: 4407938621385986, guid: de31d5bcfa15d49d4b5ea839b5fcf786, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4407938621385986, guid: de31d5bcfa15d49d4b5ea839b5fcf786, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4407938621385986, guid: de31d5bcfa15d49d4b5ea839b5fcf786, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4407938621385986, guid: de31d5bcfa15d49d4b5ea839b5fcf786, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4407938621385986, guid: de31d5bcfa15d49d4b5ea839b5fcf786, type: 2}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: de31d5bcfa15d49d4b5ea839b5fcf786, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &495536006
 GameObject:
   m_ObjectHideFlags: 0
@@ -640,7 +682,7 @@ GameObject:
   m_Layer: 0
   m_Name: EdgeCheck
   m_TagString: Untagged
-  m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -800,6 +842,34 @@ Transform:
   m_Father: {fileID: 495536010}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &749788681
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 749788682}
+  m_Layer: 0
+  m_Name: CheckPoint_01
+  m_TagString: Untagged
+  m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &749788682
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 749788681}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.07, y: -0.47, z: -0.14448762}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &767831578
 GameObject:
   m_ObjectHideFlags: 0
@@ -811,7 +881,6 @@ GameObject:
   - component: {fileID: 767831581}
   - component: {fileID: 767831580}
   - component: {fileID: 767831579}
-  - component: {fileID: 767831583}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -924,25 +993,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &767831583
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 767831578}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1911a7589d77e47e3b4f8b22228c272a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveSpeed: 5
-  MoveRight: 1
-  WallCheck: {fileID: 2053459952}
-  WallCheckRadius: 1
-  WhatIsWall:
-    serializedVersion: 2
-    m_Bits: 768
-  EdgeCheck: {fileID: 511952924}
 --- !u!1 &818999924
 GameObject:
   m_ObjectHideFlags: 0
@@ -1473,6 +1523,48 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1789646190
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4405407318740828, guid: e0060d5f3aa7c4423ad528295b40ef82, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.06610207
+      objectReference: {fileID: 0}
+    - target: {fileID: 4405407318740828, guid: e0060d5f3aa7c4423ad528295b40ef82, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.47464433
+      objectReference: {fileID: 0}
+    - target: {fileID: 4405407318740828, guid: e0060d5f3aa7c4423ad528295b40ef82, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0.14481571
+      objectReference: {fileID: 0}
+    - target: {fileID: 4405407318740828, guid: e0060d5f3aa7c4423ad528295b40ef82, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4405407318740828, guid: e0060d5f3aa7c4423ad528295b40ef82, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4405407318740828, guid: e0060d5f3aa7c4423ad528295b40ef82, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4405407318740828, guid: e0060d5f3aa7c4423ad528295b40ef82, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4405407318740828, guid: e0060d5f3aa7c4423ad528295b40ef82, type: 2}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: e0060d5f3aa7c4423ad528295b40ef82, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &2053459950
 GameObject:
   m_ObjectHideFlags: 0
@@ -1485,7 +1577,7 @@ GameObject:
   m_Layer: 0
   m_Name: WallCheck
   m_TagString: Untagged
-  m_Icon: {fileID: 7148428337604731935, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
