@@ -31,8 +31,7 @@ public class LevelManager : MonoBehaviour {
         StartCoroutine("RespawnPCCo");
     }
 
-    public IEnumerator RespawnPlayerCo()
-    {
+    private IEnumerator RespawnPlayerCo() {
         //Generate Death Particle
         Instantiate(DeathParticles, PC.transform.position, PC.transform.rotation);
         //hide Player
@@ -45,7 +44,7 @@ public class LevelManager : MonoBehaviour {
         //Point Penalty
         ScoreManager.AddPoints(-PointPenaltyOnDeath);
         //Debug Message
-        Debug.Log("Player Respawn");
+        Debug.Log("PC Respawn");
         //Respawn Delay
         yield return new WaitForSeconds(RespawnDelay);
         //Gravity Restore
