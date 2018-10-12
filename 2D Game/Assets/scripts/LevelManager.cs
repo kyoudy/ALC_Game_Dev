@@ -2,20 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LevelManager : MonoBehaviour {
+public class LevelManager : MonoBehaviour
+{
 
-    public GameObject currentCheckPoint;
-    private Rigidbody2D PC;
+    public GameObject CurrentCheckPoint;
+    public Rigidbody2D PC;
 
     // Particles
-    public GameObject DeathParticles;
-    public GameObject RespawnParticles;
+    public GameObject DeathParticle;
+    public GameObject RespawnParticle;
 
     //Respawn Delay
     public float RespawnDelay;
 
 
-    // Point Penalty on Death
+    //Point Penalty on Death
     public int PointPenaltyOnDeath;
 
     // Store Gravity Value
@@ -23,25 +24,28 @@ public class LevelManager : MonoBehaviour {
 
 
     // Use this for initialization
-    void Start(){
-        PC = FindObjectOfType<Rigidbody2D>();
+    void Start()
+    {
+        // PC = FindObjectOfType<Rigidbody2D> ();
     }
 
-    public void RespawnPlayer(){
-        StartCoroutine("RespawnPCCo");
+    public void RespawnPlayer()
+    {
+        StartCoroutine("RespawnPlayerCo");
     }
 
-    private IEnumerator RespawnPlayerCo() {
+    public IEnumerator RespawnPlayerCo()
+    {
         //Generate Death Particle
-        Instantiate(DeathParticles, PC.transform.position, PC.transform.rotation);
-        //hide Player
-        //PC.enable = false;
+        Instantiate(DeathParticle, PC.transform.position, PC.transform.rotation);
+        //Hide PC
+        // PC.enabled = false;
         PC.GetComponent<Renderer>().enabled = false;
-        //Gravity Reset
+        // Gravity Reset
         GravityStore = PC.GetComponent<Rigidbody2D>().gravityScale;
         PC.GetComponent<Rigidbody2D>().gravityScale = 0f;
         PC.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-        //Point Penalty
+        // Point Penalty
         ScoreManager.AddPoints(-PointPenaltyOnDeath);
         //Debug Message
         Debug.Log("PC Respawn");
@@ -49,12 +53,12 @@ public class LevelManager : MonoBehaviour {
         yield return new WaitForSeconds(RespawnDelay);
         //Gravity Restore
         PC.GetComponent<Rigidbody2D>().gravityScale = GravityStore;
-        //Math Player transform position
-        RespawnPlayer.transform.position = currentCheckPoint.transform.position;
+        //Match PCs transform position
+        PC.transform.position = CurrentCheckPoint.transform.position;
         //Show PC
-        //PC.enable = true;
+        // PC.enabled = true;
         PC.GetComponent<Renderer>().enabled = true;
         //Spawn PC
-        Instantiate(RespawnParticles, currentCheckPoint.transform.position, currentCheckPoint.transform.rotation);
+        Instantiate(RespawnParticle, CurrentCheckPoint.transform.position, CurrentCheckPoint.transform.rotation);
     }
 }
