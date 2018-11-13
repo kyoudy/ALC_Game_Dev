@@ -1,6 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using System.Collections;
 
 public class PlayerShoot : MonoBehaviour
 {
@@ -9,7 +8,8 @@ public class PlayerShoot : MonoBehaviour
 
     void Start()
     {
-        Projectile = GameObject.Find("Projectile");
+        // Load Projectile from Resources/Prefabs Folder
+        Projectile = Resources.Load("Prefabs/Projectile") as GameObject;
     }
     // Update is called once per frame
     void Update()
