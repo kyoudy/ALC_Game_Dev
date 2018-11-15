@@ -1,29 +1,34 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using System.Collections;
 
-public class CameraFollow : MonoBehaviour {
+public class CameraFollow : MonoBehaviour
+{
 
     public CharMove Player;
+
     public bool isFollowing;
 
 
-    //Camera position offset
+    // Camera position offset
     public float xOffset;
     public float yOffset;
 
     // Use this for initialization
-	void Start () {
+    void Start()
+    {
         Player = FindObjectOfType<CharMove>();
 
         isFollowing = true;
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        if(isFollowing){
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (isFollowing)
+        {
             transform.position = new Vector3(Player.transform.position.x + xOffset, Player.transform.position.y + yOffset, transform.position.z);
+
         }
-		
-	}
+    }
+
 }
