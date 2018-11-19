@@ -176,9 +176,9 @@ MonoBehaviour:
     type: 2}
   PC: {fileID: 50196793552272682}
   PC2: {fileID: 1192397430574092}
-  DeathParticle: {fileID: 1932741910303384, guid: 44f3c8aebba1f430c8500b89ce06c42f,
+  DeathParticle: {fileID: 1455803542483758, guid: 44f3c8aebba1f430c8500b89ce06c42f,
     type: 2}
-  RespawnParticle: {fileID: 1683022542290738, guid: 84948273d415d4346bf01216041362e5,
+  RespawnParticle: {fileID: 1047663176400874, guid: 84948273d415d4346bf01216041362e5,
     type: 2}
   RespawnDelay: 1
   PointPenaltyOnDeath: 0
