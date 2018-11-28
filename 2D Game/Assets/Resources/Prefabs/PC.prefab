@@ -159,7 +159,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a889851560c51428fade0ef0363fc6f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentCheckPoint: {fileID: 0}
+  CurrentCheckPoint: {fileID: 1995199869436244, guid: 58ec357643ea84081b344126e836b4ae,
+    type: 2}
   PC: {fileID: 50196793552272682}
   PC2: {fileID: 1192397430574092}
   DeathParticle: {fileID: 1246186797697728, guid: 44f3c8aebba1f430c8500b89ce06c42f,
@@ -180,7 +181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FirePoint: {fileID: 4425902212549292}
-  Projectile: {fileID: 0}
+  Projectile: {fileID: 1272690201045566, guid: ceb547624ae2c499d82893237358405f, type: 2}
 --- !u!114 &114901200326675666
 MonoBehaviour:
   m_ObjectHideFlags: 1
