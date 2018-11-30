@@ -159,7 +159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a889851560c51428fade0ef0363fc6f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentCheckPoint: {fileID: 1995199869436244, guid: 58ec357643ea84081b344126e836b4ae,
+  CurrentCheckPoint: {fileID: 1717649474090248, guid: e5141c18e5ac446659c24858e1b94d22,
     type: 2}
   PC: {fileID: 50196793552272682}
   PC2: {fileID: 1192397430574092}
