@@ -4,7 +4,7 @@ using System.Collections;
 public class CharMove : MonoBehaviour
 {
 
-    //Player movement variables
+    /Player movement variables
     public float moveSpeed;
     public float jumpHeight;
     private bool doubleJump;
