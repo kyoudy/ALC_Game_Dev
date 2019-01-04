@@ -4,7 +4,7 @@ using System.Collections;
 public class CharMove : MonoBehaviour
 {
 
-    /Player movement variables
+    //Player movement variables
     public float moveSpeed;
     public float jumpHeight;
     private bool doubleJump;
@@ -24,8 +24,8 @@ public class CharMove : MonoBehaviour
     void Start()
     {
         // Animation reset
-        animator.SetBool("isWalking", false);
-        animator.SetBool("isJumping", false);
+        animator.SetBool("isWalking",false);
+        animator.SetBool("isJumping",false);
 
     }
 
@@ -52,7 +52,7 @@ public class CharMove : MonoBehaviour
         }
 
 
-        if (Input.GetKeyDown(KeyCode.Space) && !doubleJump && !grounded)
+        if (Input.GetKeyDown(KeyCode.Space)&& !doubleJump && !grounded)
         {
             Jump();
             doubleJump = true;
@@ -90,10 +90,10 @@ public class CharMove : MonoBehaviour
 
         //Player flip
         if (GetComponent<Rigidbody2D>().velocity.x > 0)
-            transform.localScale = new Vector3(1f, 1f, 1f);
+            transform.localScale = new Vector3(2.991059f, 3f, 1f);
 
         else if (GetComponent<Rigidbody2D>().velocity.x < 0)
-            transform.localScale = new Vector3(-1f, 1f, 1f);
+            transform.localScale = new Vector3(-2.991059f, 3f, 1f);
 
     }
 
